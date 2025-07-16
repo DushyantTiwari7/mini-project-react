@@ -1,0 +1,13 @@
+.InfoBox {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #000;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
