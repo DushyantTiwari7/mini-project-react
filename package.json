@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "vercel-build": "vite build && if exist dist (rd /s /q public & ren dist public)"
+    "vercel-build": "vite build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
