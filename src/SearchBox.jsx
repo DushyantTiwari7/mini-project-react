@@ -7,12 +7,12 @@ import { useState } from "react";
 export default function SearchBox({ updateInfo }) {
     let [city, setCity] = useState("");
     let [error, setError] = useState(false);
-    const API_URL = "https://api.openweathermap.org/data/2.5/weather";
-    const API_KEY = "4cb4a628b5268a56857b1bdd3c8523d8";
+    const API_BASE = "https://api.openweathermap.org/data/2.5/weather";
+   const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
 
     let getWeatherInfo = async () => {
         try {
-            let response = await fetch(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
+            let response = await fetch(`${API_BASE}?q=${city}&appid=${API_KEY}&units=metric`);
             
             if (!response.ok) {
                 throw new Error("City not found");
